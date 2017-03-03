@@ -29,7 +29,6 @@ public class PasswordActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_password);
-        InitView();
         HttpData();
     }
 
@@ -53,10 +52,6 @@ public class PasswordActivity extends BaseActivity {
         tv_trading_password.setOnClickListener(new MyOnClickListener());
 
         img_back_title.setOnClickListener(new MyOnClickListener());
-
-    }
-
-    private void InitView() {
 
     }
 

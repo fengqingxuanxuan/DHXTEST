@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.tiantianle">
+    package="com.tiantianle">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MyaApplication"
@@ -12,48 +13,70 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.HomePageActivity"
+            android:launchMode="singleTask"
+            >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <!-- 夺宝记录 -->
-        <activity android:name=".activity.IndianaRember">
-        </activity>
-        <!-- 红包记录 -->
-        <activity android:name=".activity.HongBaoRember">
-        </activity>
+        <activity android:name=".activity.IndianaRember"></activity>
+        <!-- 红包兑换记录界面 -->
+        <activity android:name=".activity.HongBaoRember"></activity>
         <!-- 兑换商城-兑换记录 -->
-        <activity android:name=".activity.ShaoppingDuiHuanJiLu">
-        </activity>
+        <activity android:name=".activity.ShaoppingDuiHuanJiLu"></activity>
         <!-- 京东E卡密 -->
-        <activity android:name=".activity.JingDongEka">
-        </activity>
+        <activity android:name=".activity.JingDongEka"></activity>
         <!-- 移动卡密 -->
-        <activity android:name=".activity.YiDongKaMi">
-        </activity>
+        <activity android:name=".activity.YiDongKaMi"></activity>
         <!-- 石油卡密 -->
-        <activity android:name=".activity.ShiYouKami">
-        </activity>
+        <activity android:name=".activity.ShiYouKami"></activity>
+
+        <activity android:name=".activity.Betting"></activity>
+        <activity android:name=".activity.AutoBetting"></activity>
+
+
+        <!--宗***********************************************-->
+
+        <!--主界面-->
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask"></activity>
+
+        <!--登录-->
+        <activity android:name=".activity.LoginActivity"
+            android:launchMode="singleTask"></activity>
+
+        <!--忘记密码 / 注册界面-->
+        <activity android:name=".activity.ForgotPasswordActivity"></activity>
+
+        <!--设置交易密码-->
+        <activity android:name=".activity.SetTradingPassword"></activity>
+
+        <!--修改个人信息-->
+        <activity android:name=".activity.ModifyInformationActivity"></activity>
 
         <!-- 我的消息 -->
-        <activity android:name=".activity.MessageActivity">
-        </activity>
+        <activity android:name=".activity.MessageActivity"></activity>
 
         <!-- 我的消息二级界面 -->
-        <activity android:name=".activity.SpecificMessageActivity">
-        </activity>
-        <!-- 投注 -->
-        <activity android:name=".activity.Betting">
-        </activity>
-        <!-- 自动投注 -->
-        <activity android:name=".activity.AutoBetting">
-        </activity>
-        <!--开奖明细-->
-        <activity android:name=".activity.Detailed">
-        </activity>
+        <activity android:name=".activity.SpecificMessageActivity"></activity>
+
+        <!--密码设置-->
+        <activity android:name=".activity.PasswordActivity"></activity>
+
+        <!--修改(登录/交易)密码-->
+        <activity android:name=".activity.ModifyLoginPasswordActivity"></activity>
+
+        <!--短信验证-->
+        <activity android:name=".activity.MessageAuthenticationActivity"></activity>
+
+        <!--模式管理-->
+        <activity android:name=".activity.ModelManagementActivity"></activity>
+
     </application>
 
 </manifest>

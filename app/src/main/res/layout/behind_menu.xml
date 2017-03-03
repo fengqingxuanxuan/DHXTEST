@@ -1,153 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-              android:background="@color/colorCeMenuBack">
+    android:background="@color/colorCeMenuBack"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <ImageView
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/pepoHead"
-            android:src="@mipmap/pepohead"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_marginLeft="10dp"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@mipmap/tx"
+            android:layout_marginLeft="7dp"
+            app:riv_border_color="@color/colorText"
+            app:riv_border_width="2dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:textSize="17sp"
-            android:id="@+id/vip"
-            android:layout_toRightOf="@id/pepoHead"
-            android:textColor="@color/colorText"
+            app:riv_oval="true" />
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/VIP"
-            />
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="5dp"
-            android:id="@+id/text_vip"
-            android:textSize="17sp"
-            android:text="156037"
-            android:layout_toRightOf="@id/vip"
-            android:textColor="@color/colorText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:id="@+id/magicbean"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
             android:layout_toRightOf="@id/pepoHead"
-            android:layout_below="@id/vip"
-            android:layout_width="wrap_content"
-            android:text="@string/MagicBean"
-            android:textColor="@color/colorText"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:id="@+id/text_magicbean"
-            android:layout_below="@id/vip"
-            android:textSize="17sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/magicbean"
-            android:textColor="@color/colorText"
-            android:text="1000"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Nicknames"
+                    android:textColor="@color/colorText"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:layout_marginLeft="5dp"
+                    android:text="暂未登录"
+                    android:textColor="@color/colorText"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/magicbean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/MagicBean"
+                    android:textColor="@color/colorText"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text_magicbean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="5dp"
+                    android:lines="1"
+                    android:text="0.00"
+                    android:textColor="@color/colorText"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
     </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="10dp"
         android:background="@color/colorTextGame"></View>
+
     <TextView
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/GameTimes"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/GameTimes"
         android:textColor="@color/colorTextGame"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
+
     <RadioGroup
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <RadioButton
             android:id="@+id/jisu28"
-            android:layout_marginTop="10dp"
-            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:drawableLeft="@mipmap/jisu"
+            android:layout_marginTop="10dp"
             android:background="@drawable/menu_select_back"
-            android:text="@string/Jisu28"
             android:button="@null"
+            android:drawableLeft="@mipmap/jisu"
             android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:text="@string/Jisu28"
             android:textColor="@color/colorText"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
+
         <RadioButton
             android:id="@+id/jianada28"
-            android:layout_marginTop="5dp"
-            android:layout_height="50dp"
-            android:background="@drawable/menu_select_back"
-            android:paddingLeft="10dp"
             android:layout_width="match_parent"
-            android:drawableLeft="@mipmap/jianada"
-            android:text="@string/Canada28"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/menu_select_back"
             android:button="@null"
+            android:drawableLeft="@mipmap/jianada"
             android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:text="@string/Canada28"
             android:textColor="@color/colorText"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
 
 
         <RadioButton
             android:id="@+id/beijing28"
-            android:layout_marginTop="5dp"
-            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/menu_select_back"
-            android:drawableLeft="@mipmap/beijing"
-            android:text="@string/BeiJing28"
             android:button="@null"
+            android:drawableLeft="@mipmap/beijing"
             android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:text="@string/BeiJing28"
             android:textColor="@color/colorText"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
+
         <RadioButton
             android:id="@+id/indiana"
-            android:layout_marginTop="5dp"
-            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/menu_select_back"
-            android:drawableLeft="@mipmap/indiana"
-            android:text="@string/Indiana"
             android:button="@null"
+            android:drawableLeft="@mipmap/indiana"
             android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:text="@string/Indiana"
             android:textColor="@color/colorText"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
+
         <RadioButton
             android:id="@+id/hongbao"
-            android:layout_marginTop="5dp"
-            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:drawableLeft="@mipmap/hongbao"
-            android:text="@string/HongBao"
+            android:layout_marginTop="5dp"
             android:background="@drawable/menu_select_back"
             android:button="@null"
+            android:drawableLeft="@mipmap/hongbao"
             android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:text="@string/HongBao"
             android:textColor="@color/colorText"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
     </RadioGroup>
 </LinearLayout>

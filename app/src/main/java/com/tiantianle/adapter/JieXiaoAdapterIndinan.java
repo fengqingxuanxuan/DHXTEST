@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -16,6 +17,8 @@ import com.tiantianle.Bean.AllIndianaBean;
 import com.tiantianle.R;
 import com.tiantianle.intface.ShowTotalcount;
 import com.tiantianle.intface.UserTotalcoutNum;
+import com.tiantianle.utils.IntentUtils;
+import com.tiantianle.utils.ToastUtils;
 
 import java.util.List;
 
@@ -27,13 +30,11 @@ public class JieXiaoAdapterIndinan extends BaseAdapter {
     private List<AllIndianaBean.BizContentBean> mList;
     private UserTotalcoutNum mUserTotalcoutNum;
     private LocalBroadcastManager mLocalBroadcastManager;
-
-    public JieXiaoAdapterIndinan(ShowTotalcount showTotalcount) {
+    public JieXiaoAdapterIndinan(ShowTotalcount showTotalcount){
         mUserTotalcoutNum = new UserTotalcoutNum();
         mUserTotalcoutNum.setShowTotalcout(showTotalcount);
 
     }
-
     public void setList(List<AllIndianaBean.BizContentBean> list) {
         mList = list;
     }
@@ -58,7 +59,7 @@ public class JieXiaoAdapterIndinan extends BaseAdapter {
         View view = convertView;
         ViewHolder viewHolder = null;
         if (view == null || !(view.getTag() instanceof ViewHolder)) {
-            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_jiexiao_adapter, null, false);
+            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_all_adapter_indinanremb, null, false);
             viewHolder = new ViewHolder(view);
             view.setTag(viewHolder);
         } else {
@@ -68,46 +69,79 @@ public class JieXiaoAdapterIndinan extends BaseAdapter {
         String specname = bizContentBean.getSpecname();
         specname = specname.substring(0, specname.length() - 2);
         mUserTotalcoutNum.UserTotal(bizContentBean.getTotalcount());
-        viewHolder.mTextModouItmeJiexiaoAdapterIndinand.setText(specname);
+        viewHolder.mTextModouItmeAllAdapterIndinand.setText(specname);
         String issuenum = bizContentBean.getIssuenum();
         String replace = issuenum.replace(bizContentBean.getSpeccode(), "");
-        viewHolder.mTextQishuJiexiaoFramIndinanremb.setText(replace);
-        // viewHolder.mTextNameItmeAllAdapterIndinand.setText(bizContentBean.getWarename());
-        viewHolder.mTextRenciJiexiaoFramIndinanremb.setText(bizContentBean.getPlaynum() + "");
-        viewHolder.mTextRenci2JiexiaoFramIndinanremb.setText(bizContentBean.getWinnum() + "");
-        viewHolder.mText3JiexiaoFramIndinanremb.setText(bizContentBean.getWinname() == null ? "" : bizContentBean.getWinname());
+        viewHolder.mTextQishuAllFramIndinanremb.setText(replace);
+        viewHolder.mTextNameItmeAllAdapterIndinand.setText(bizContentBean.getWarename());
+        viewHolder.mTextRenciAllFramIndinanremb.setText(bizContentBean.getPlaynum() + "");
+        viewHolder.mProgressBarAllAdapterIndianaremb.setMax(bizContentBean.getUsernum());
+        viewHolder.mProgressBarAllAdapterIndianaremb.setProgress(bizContentBean.getPlaynum());
+        viewHolder.mTextRenci2AllFramIndinanremb.setText(bizContentBean.getWinnum() + "");
+        viewHolder.mText3AllFramIndinanremb.setText(bizContentBean.getWinname() == null ? "" : bizContentBean.getWinname());
         int sta = bizContentBean.getStatus();
-        if (sta == 2) {
-
+        if (sta == 0) {
+            viewHolder.mLlAllAdapterIndinanremb.setVisibility(View.GONE);
+            viewHolder.mLlQuanbuIndinanremb.setVisibility(View.GONE);
+            viewHolder.mLlAllJieixaoIndinanremb.setVisibility(View.GONE);
+            viewHolder.mRlAllAdapterIndinanremb.setVisibility(View.GONE);
+        } else if (sta == 1) {
+            viewHolder.mLlAllJieixaoIndinanremb.setVisibility(View.GONE);
+            viewHolder.mLlAllAdapterIndinanremb.setVisibility(View.GONE);
+            viewHolder.mLlQuanbuIndinanremb.setVisibility(View.GONE);
+            viewHolder.mRlAllAdapterIndinanremb.setVisibility(View.GONE);
+        } else if (sta == 2) {
+            viewHolder.mLlAllJieixaoIndinanremb.setVisibility(View.VISIBLE);
+            viewHolder.mRlAllAdapterIndinanremb.setVisibility(View.GONE);
+            viewHolder.mLlAllAdapterIndinanremb.setVisibility(View.GONE);
         }
-
-        viewHolder.mBtnAgainJiexiaoJiexiaoFramIndinanremb.setOnClickListener(new View.OnClickListener() {
+        viewHolder.mTextUsernumAllIndinaremb.setText("总需" + bizContentBean.getUsernum() + "人次");
+        viewHolder.mTextShentyvrenshuAllIndinanremb.setText("剩余" + (bizContentBean.getUsernum() - bizContentBean.getPlaynum()));
+        viewHolder.mBtnZhuijiaAllAdapterIndinanremb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                mLocalBroadcastManager = LocalBroadcastManager.getInstance(viewGroup.getContext());
-                Intent intent = new Intent("com.tiantianle.adapter");
+            }
+        });
+        viewHolder.mBtnAgainAllFramIndinanremb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        viewHolder.mBtnAgainAllJiexiaoFramIndinanremb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mLocalBroadcastManager=LocalBroadcastManager.getInstance(viewGroup.getContext());
+                Intent intent=new Intent("com.tiantianle.adapter");
                 mLocalBroadcastManager.sendBroadcast(intent);
             }
         });
         return view;
     }
 
-
     static class ViewHolder {
         protected ImageView mImgAllFramIndinanremb;
-        protected TextView mTextModouItmeJiexiaoAdapterIndinand;
-        protected TextView mTextNameItmeJiexiaoAdapterIndinand;
-        protected TextView mTextJiexiaoFramIndinanremb;
-        protected TextView mTextQishuJiexiaoFramIndinanremb;
-        protected TextView mText11jiexiaoFramIndinanrenb;
-        protected TextView mTextRenciJiexiaoFramIndinanremb;
+        protected TextView mTextModouItmeAllAdapterIndinand;
+        protected TextView mTextNameItmeAllAdapterIndinand;
+        protected TextView mTextAllFramIndinanremb;
+        protected TextView mTextQishuAllFramIndinanremb;
+        protected TextView mText11allFramIndinanrenb;
+        protected TextView mTextRenciAllFramIndinanremb;
         protected LinearLayout mLlQuanbuIndinanremb;
-        protected TextView mText2JiexiaoFramIndinanremb;
-        protected TextView mText3JiexiaoFramIndinanremb;
-        protected TextView mTextRenci2JiexiaoFramIndinanremb;
-        protected Button mBtnAgainJiexiaoJiexiaoFramIndinanremb;
-        protected RelativeLayout mLlJiexiaoJieixaoIndinanremb;
+        protected ProgressBar mProgressBarAllAdapterIndianaremb;
+        protected TextView mTextUsernumAllIndinaremb;
+        protected TextView mTextShentyvrenshuAllIndinanremb;
+        protected Button mBtnZhuijiaAllAdapterIndinanremb;
+        protected LinearLayout mLlAllAdapterIndinanremb;
+        protected Button mBtnAgainAllFramIndinanremb;
+        protected RelativeLayout mRlAllAdapterIndinanremb;
+        protected TextView mText2AllFramIndinanremb;
+        protected TextView mText3AllFramIndinanremb;
+        protected TextView mTextRenci2AllFramIndinanremb;
+        protected Button mBtnAgainAllJiexiaoFramIndinanremb;
+        protected RelativeLayout mLlAllJieixaoIndinanremb;
 
         ViewHolder(View rootView) {
             initView(rootView);
@@ -115,18 +149,25 @@ public class JieXiaoAdapterIndinan extends BaseAdapter {
 
         private void initView(View rootView) {
             mImgAllFramIndinanremb = (ImageView) rootView.findViewById(R.id.img_all_fram_indinanremb);
-            mTextModouItmeJiexiaoAdapterIndinand = (TextView) rootView.findViewById(R.id.text_modou_itme_jiexiao_adapter_indinand);
-            mTextNameItmeJiexiaoAdapterIndinand = (TextView) rootView.findViewById(R.id.text_name_itme_jiexiao_adapter_indinand);
-            mTextJiexiaoFramIndinanremb = (TextView) rootView.findViewById(R.id.text_jiexiao_fram_indinanremb);
-            mTextQishuJiexiaoFramIndinanremb = (TextView) rootView.findViewById(R.id.text_qishu_jiexiao_fram_indinanremb);
-            mText11jiexiaoFramIndinanrenb = (TextView) rootView.findViewById(R.id.text1_1jiexiao_fram_indinanrenb);
-            mTextRenciJiexiaoFramIndinanremb = (TextView) rootView.findViewById(R.id.text_renci_jiexiao_fram_indinanremb);
+            mTextModouItmeAllAdapterIndinand = (TextView) rootView.findViewById(R.id.text_modou_itme_all_adapter_indinand);
+            mTextNameItmeAllAdapterIndinand = (TextView) rootView.findViewById(R.id.text_name_itme_all_adapter_indinand);
+            mTextAllFramIndinanremb = (TextView) rootView.findViewById(R.id.text_all_fram_indinanremb);
+            mTextQishuAllFramIndinanremb = (TextView) rootView.findViewById(R.id.text_qishu_all_fram_indinanremb);
+            mText11allFramIndinanrenb = (TextView) rootView.findViewById(R.id.text1_1all_fram_indinanrenb);
+            mTextRenciAllFramIndinanremb = (TextView) rootView.findViewById(R.id.text_renci_all_fram_indinanremb);
             mLlQuanbuIndinanremb = (LinearLayout) rootView.findViewById(R.id.ll_quanbu_indinanremb);
-            mText2JiexiaoFramIndinanremb = (TextView) rootView.findViewById(R.id.text2_jiexiao_fram_indinanremb);
-            mText3JiexiaoFramIndinanremb = (TextView) rootView.findViewById(R.id.text3_jiexiao_fram_indinanremb);
-            mTextRenci2JiexiaoFramIndinanremb = (TextView) rootView.findViewById(R.id.text_renci2_jiexiao_fram_indinanremb);
-            mBtnAgainJiexiaoJiexiaoFramIndinanremb = (Button) rootView.findViewById(R.id.btn_again_jiexiao_jiexiao_fram_indinanremb);
-            mLlJiexiaoJieixaoIndinanremb = (RelativeLayout) rootView.findViewById(R.id.ll_jiexiao_jieixao_indinanremb);
+            mProgressBarAllAdapterIndianaremb = (ProgressBar) rootView.findViewById(R.id.progressBar_all_adapter_indianaremb);
+            mTextUsernumAllIndinaremb = (TextView) rootView.findViewById(R.id.text_usernum_all_indinaremb);
+            mTextShentyvrenshuAllIndinanremb = (TextView) rootView.findViewById(R.id.text_shentyvrenshu_all_indinanremb);
+            mBtnZhuijiaAllAdapterIndinanremb = (Button) rootView.findViewById(R.id.btn_zhuijia_all_adapter_indinanremb);
+            mLlAllAdapterIndinanremb = (LinearLayout) rootView.findViewById(R.id.ll_all_adapter_indinanremb);
+            mBtnAgainAllFramIndinanremb = (Button) rootView.findViewById(R.id.btn_again_all_fram_indinanremb);
+            mRlAllAdapterIndinanremb = (RelativeLayout) rootView.findViewById(R.id.rl_all_adapter_indinanremb);
+            mText2AllFramIndinanremb = (TextView) rootView.findViewById(R.id.text2_all_fram_indinanremb);
+            mText3AllFramIndinanremb = (TextView) rootView.findViewById(R.id.text3_all_fram_indinanremb);
+            mTextRenci2AllFramIndinanremb = (TextView) rootView.findViewById(R.id.text_renci2_all_fram_indinanremb);
+            mBtnAgainAllJiexiaoFramIndinanremb = (Button) rootView.findViewById(R.id.btn_again_all_jiexiao_fram_indinanremb);
+            mLlAllJieixaoIndinanremb = (RelativeLayout) rootView.findViewById(R.id.ll_all_jieixao_indinanremb);
         }
     }
 }

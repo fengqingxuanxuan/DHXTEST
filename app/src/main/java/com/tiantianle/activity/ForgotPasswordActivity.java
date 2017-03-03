@@ -50,6 +50,7 @@ public class ForgotPasswordActivity extends BaseActivity {
     private Boolean isbool = false;  //true 为注册界面  false 为登录界面
 
     private String number;
+    String ss;
     private String codes;
     private String password;
 

@@ -7,11 +7,17 @@
     <string name="HongBao">整点抢红包</string>
     <string name="Hall">大厅</string>
     <string name="Trend">趋势</string>
+    <string name="TrendQuery">趋势查询</string>
+    <string name="StatisticalRange">统计范围:</string>
+    <string name="period">期</string>
+    <string name="cancel">取消</string>
+    <string name="determine">确定</string>
     <string name="ShoppingMall">兑换商城</string>
     <string name="My">我的</string>
     <string name="Seting">设置</string>
     <string name="VIP">会员</string>
-    <string name="MagicBean">魔豆</string>
+    <string name="MagicBean">魔豆:</string>
+    <string name="Nicknames">昵称:</string>
     <string name="GameTimes">游戏场次</string>
     <string name="RecordHongbao">红包记录</string>
     <string name="RecordIndiana">夺宝记录</string>
@@ -41,6 +47,8 @@
     <string name="julihongbao">距离下一场抢红包</string>
     <string name="hongbaochangci1">第一场</string>
     <string name="hongbaochangci2">第二场</string>
+    <string name="hongbaochangci3">第三场</string>
+    <string name="hongbaoTime">00:00</string>
     <string name="hongbaoDongtai">红包动态</string>
     <string name="userID">用户ID</string>
     <string name="jine">红包金额</string>
@@ -60,19 +68,32 @@
     <string name="MyMessage">我的消息</string>
     <string name="MyMessage_delete">清空</string>
 
+    <!--模式管理-->
+    <string name="New_Mode">新建模式</string>
+    <string name="Mode_Name">模式名称</string>
+    <string name="Betting_Amount">投注金额</string>
+    <string name="Modify_Name">改名</string>
+    <string name="Delete_Name">删除</string>
+    <string name="Delete_Mode">删除模式</string>
+    <string name="Confirm_Delete_Mode">确认删除模式</string>
+    <string name="Modify_Mode_Name">修改模式名称</string>
+    
+    
+    
     <!--登陆界面-->
     <string name="Input_Number">请输入手机号码</string>
     <string name="Input_Password">请输入密码</string>
     <string name="Login_Immediately">立即登录</string>
     <string name="Forgot_Password">忘记密码?</string>
     <string name="Register_Now">立即注册</string>
-
+    <string name="Visitors_Login">游客账户登录</string>
+    
     <string name="Forgot_Passwords">忘记密码</string>
     <string name="Please_Code">请输入验证码</string>
     <string name="Please_New_Password">请输入新的登录密码</string>
     <string name="Obtain_Code">获取验证码</string>
     <string name="Reset_Password">重置密码</string>
-
+    
     <string name="Registered">注册</string>
     <string name="Please_Passwords">请输入登录密码</string>
 
@@ -103,16 +124,11 @@
 
     <!--修改个人信息-->
     <string name="Click_Modify_Head">点击修改头像</string>
+    <string name="Click_Login">点击登录</string>
     <string name="Nickname">昵称：</string>
     <string name="Signature">签名：</string>
     <string name="Trade_Password">交易密码：</string>
 
     <!--刷新-->
     <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
-
-    <!--倒计时-->
-    <string name="count_down_default_format">%1$s分%2$s秒</string>
-    <string name="user_confirm_countdown"><![CDATA[自定义倒计时样式：<font size=\"3\" color=\"red\">%1$s </font>分<font size=\"3\" color=\"red\">%2$s</font> 秒]]></string>
-
-
 </resources>

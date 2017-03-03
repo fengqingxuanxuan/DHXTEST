@@ -2,11 +2,12 @@ package com.tiantianle.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.GridView;
 import android.widget.ListView;
 
 /**
  * Created by PengBo  on 2017/2/6.
+ *
+ * //解决ScrollView嵌套listview滑动冲突
  */
 
 public class MyListview extends ListView {

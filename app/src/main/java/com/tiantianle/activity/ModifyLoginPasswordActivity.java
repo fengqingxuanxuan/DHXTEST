@@ -160,7 +160,7 @@ public class ModifyLoginPasswordActivity extends BaseActivity {
             params.addParameter("password", New_Password);
             params.addParameter("type", "0");
         }else{
-            params = new RequestParams(HttpApi.MODIFY_trading_PASSWORD);
+            params = new RequestParams(HttpApi.MODIFY_TRADING_PASSWORD);
             params.addParameter("account", Constant.Config.account);
             params.addParameter("imei", Constant.Config.imei);
             params.addParameter("oldpwd", OiginalPassword);

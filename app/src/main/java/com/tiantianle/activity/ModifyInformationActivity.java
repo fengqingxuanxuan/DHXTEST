@@ -17,13 +17,13 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.allen.library.SuperTextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
+import com.makeramen.roundedimageview.RoundedImageView;
 import com.tiantianle.BaseActivity;
 import com.tiantianle.R;
 import com.tiantianle.utils.Constant;
@@ -52,7 +52,7 @@ public class ModifyInformationActivity extends BaseActivity {
     private static final int REQUESTCODE_TAKE = 1;
     private static final int REQUESTCODE_CUTTING = 2;
 
-    private ImageView img_my_userHeard; //头像
+    private RoundedImageView img_my_userHeard; //头像
     private SuperTextView suptertext_magicBean;  //魔豆
     private EditText et_nickname;// 昵称
     private EditText et_signature;// 签名
@@ -111,7 +111,7 @@ public class ModifyInformationActivity extends BaseActivity {
 
     private void IntenView() {
 
-        img_my_userHeard = (ImageView) findViewById(R.id.img_my_userHeard);
+        img_my_userHeard = (RoundedImageView) findViewById(R.id.img_my_userHeard);
         suptertext_magicBean = (SuperTextView) findViewById(R.id.suptertext_magicBean);
         et_nickname = (EditText) findViewById(R.id.et_nickname);
         et_signature = (EditText) findViewById(R.id.et_signature);
@@ -356,6 +356,5 @@ public class ModifyInformationActivity extends BaseActivity {
                 closeDialog();
             }
         });
-
     }
 }

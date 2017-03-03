@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
+
 android {
     compileSdkVersion 25
     buildToolsVersion '25.0.2'
     defaultConfig {
         applicationId "com.tiantianle"
-        minSdkVersion 16
+        minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -25,7 +26,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.1.0'
-    testCompile 'junit:junit:4.12'
     compile project(':library')
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
     compile 'com.github.lygttpod:SuperTextView:1.1.1'
@@ -41,4 +41,5 @@ dependencies {
     compile 'com.dalong:flowlayout:1.0.3'
     compile 'com.makeramen:roundedimageview:2.3.0'
     compile project(':pulltorefresh')
+    compile 'com.makeramen:roundedimageview:2.3.0'
 }

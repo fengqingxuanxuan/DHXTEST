@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/progressbarNomal"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_red"></include>
+
+    <Button
+        android:id="@+id/bt_model_management"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_textview_new_model"
+        android:text="@string/New_Mode"
+        android:textColor="@color/colorBackMemu" />
+
+    <com.tiantianle.view.PullToRefreshView
+        android:id="@+id/ll_pull"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_mode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/progressbarNomal"
+            android:dividerHeight="7dp"></ListView>
+
+    </com.tiantianle.view.PullToRefreshView>
+
+</LinearLayout>

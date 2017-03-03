@@ -2,5 +2,13 @@
     {
         "merged": "F:\\pbtest\\TianTianLe\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\slidingmenumain.xml",
         "source": "F:\\pbtest\\TianTianLe\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\slidingmenumain.xml"
+    },
+    {
+        "merged": "F:\\dhx\\TianTianLe\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\slidingmenumain.xml",
+        "source": "F:\\dhx\\TianTianLe\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\slidingmenumain.xml"
+    },
+    {
+        "merged": "E:\\Git\\Git_warehouse\\TianTianLe\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\slidingmenumain.xml",
+        "source": "E:\\Git\\Git_warehouse\\TianTianLe\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\slidingmenumain.xml"
     }
 ]

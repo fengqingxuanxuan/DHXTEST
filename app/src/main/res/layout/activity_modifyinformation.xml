@@ -21,13 +21,15 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageView
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/img_my_userHeard"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@mipmap/ic_launcher"
+                android:src="@mipmap/tx"
+                app:riv_border_color="@color/colorText"
+                app:riv_border_width="2dp"
+                app:riv_oval="true" />
 
-        />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -36,7 +38,6 @@
                 android:text="@string/Click_Modify_Head"
                 android:textColor="@color/colorText"
                 android:textSize="16sp" />
-
         </LinearLayout>
 
     </RelativeLayout>
@@ -46,10 +47,13 @@
         android:layout_height="20dp"
         android:background="@mipmap/bgsd" />
 
-    <ImageView
+
+    <com.allen.library.SuperTextView
         android:id="@+id/suptertext_magicBean"
         android:layout_width="match_parent"
-        android:layout_height="50dp"/>
+        android:layout_height="50dp"
+        app:sLeftTextString="@string/MagicBean"
+        app:sRightTextString="123456" />
 
     <View
         android:layout_width="match_parent"
@@ -126,11 +130,11 @@
 
     <LinearLayout
         android:id="@+id/ll_trade_password"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <TextView
             android:layout_width="0dp"
@@ -157,10 +161,10 @@
 
     <View
         android:id="@+id/view"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/divider"></View>
+        android:background="@color/divider"
+        android:visibility="gone"></View>
 
     <Button
         android:id="@+id/bt_confirm_change"

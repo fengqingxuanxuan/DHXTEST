@@ -1,59 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_hong_bao_rember"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@color/colorText"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
     tools:context="com.tiantianle.activity.HongBaoRember">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/colorBackMemu"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:background="@color/colorBackMemu">
 
         <ImageView
             android:id="@+id/img_hongbaoRember_back"
             android:layout_width="wrap_content"
-            android:src="@mipmap/navback"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:layout_height="wrap_content"/>
+            android:src="@mipmap/navback" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorText"
-            android:textSize="20sp"
             android:layout_centerInParent="true"
-            android:text="@string/hongbaoDuiHuan"/>
+            android:text="@string/hongbaoDuiHuan"
+            android:textColor="@color/colorText"
+            android:textSize="20sp" />
     </RelativeLayout>
-    <com.allen.library.SuperTextView
-        android:layout_gravity="center_horizontal"
-        app:sLeftTextSize="14sp"
-        app:sRightTextSize="14sp"
-        android:background="@color/colorText"
-        app:sLeftTextString="@string/jine"
-        app:sRightTextString="@string/tiem"
-
-        app:sLeftTextColor="@color/clolrTextNorenl"
-        app:sRightTextColor="@color/clolrTextNorenl"
-        android:layout_width="300dp"
-        android:layout_height="40dp"/>
-    <ListView
-        android:id="@+id/listview_hongbao_DuiHuan"
-        android:layout_width="300dp"
-        android:scrollbars="none"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="match_parent"></ListView>
 
 
+    <com.tiantianle.view.PullToRefreshView
+        android:id="@+id/ll_record"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.allen.library.SuperTextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorText"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            app:sLeftTextColor="@color/clolrTextNorenl"
+            app:sLeftTextSize="14sp"
+            app:sLeftTextString="@string/jine"
+            app:sRightTextColor="@color/clolrTextNorenl"
+            app:sRightTextSize="14sp"
+            app:sRightTextString="@string/tiem" />
 
 
+        <ListView
+            android:id="@+id/listview_hongbao_DuiHuan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:scrollbars="none"></ListView>
 
 
+    </com.tiantianle.view.PullToRefreshView>
 
 
 </LinearLayout>

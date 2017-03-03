@@ -45,23 +45,27 @@
                 android:text="@string/duihuanMianZhi"
                 android:textSize="14sp"
                 android:layout_height="wrap_content"/>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-           >
-            <GridView
-                android:id="@+id/gridView_yidongkmi"
-                android:layout_width="250dp"
-                android:verticalSpacing="3dp"
-                android:layout_centerInParent="true"
-                android:numColumns="3"
-                android:horizontalSpacing="3dp"
+
+            <com.dalong.flowlayout.FlowLayout
+                android:id="@+id/mFlowLayout"
+                app:horizontalSpacing="15dp"
+                app:verticalSpacing="15dp"
+                app:textSize="16sp"
+                app:equally="true"
+                app:stype="select"
+                app:isSingle="true"
+                app:flowGravity="center"
+                app:itemPaddingLeft="5dp"
+                app:itemPaddingTop="2dp"
+                app:itemPaddingRight="5dp"
+                app:itemPaddingBottom="2dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                app:flowBackground="@drawable/jingdongeka_radiobutton_back"
+                app:textColor="@color/clolrTextNorenl"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"/>
-
-        </RelativeLayout>
-
-
-
     </LinearLayout>
 
     <LinearLayout
@@ -84,10 +88,10 @@
             android:layout_marginLeft="5dp"
             android:textColor="@color/colorBackMemu"
             android:layout_height="wrap_content"
-            android:text=""/>
+            android:text="10000000"/>
 
         <TextView
-            android:text="魔豆"
+            android:text="@string/MagicBean"
             android:layout_marginLeft="5dp"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
@@ -114,7 +118,6 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_marginRight="10dp"
-            android:numeric="integer"
             android:layout_marginLeft="10dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/radiobutton_back_shap_nomal"

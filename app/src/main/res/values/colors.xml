@@ -20,5 +20,7 @@
     <color name="duihuandongtai">#B8B8B8</color>
     <color name="divider">#ffd2d2d2</color>
     <color name="jisulist">#F6B47D</color>
+    <color name="green">#FF26E90C</color>
+    <color name="blue">#D8020EFA</color>
 
 </resources>

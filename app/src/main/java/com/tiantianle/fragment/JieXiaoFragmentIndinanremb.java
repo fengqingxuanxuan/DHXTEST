@@ -68,16 +68,15 @@ public class JieXiaoFragmentIndinanremb extends Fragment {
             @Override
             public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
                 //开始下拉  我们做Http请求
-                page=1;
                 HttpDate(false);
             }
 
             @Override
             public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
+                HttpDate(true);
                 if(page<=shang){
                     page++;
                 }
-                HttpDate(true);
 
 
             }

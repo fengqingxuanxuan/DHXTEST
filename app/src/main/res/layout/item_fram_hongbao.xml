@@ -1,313 +1,331 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-            android:background="@color/colorText"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorText"
+    android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorBackMemu"
-        >
+        android:background="@color/colorBackMemu">
+
         <ImageView
-            android:layout_marginLeft="10dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
             android:id="@+id/bigh_menu"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@mipmap/menu"/>
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/menu" />
 
         <TextView
-            android:layout_centerInParent="true"
             android:id="@+id/bigh_text"
             android:layout_width="wrap_content"
-            android:textSize="20sp"
-            android:textColor="@color/colorText"
             android:layout_height="wrap_content"
-            android:text="@string/HongBao"/>
+            android:layout_centerInParent="true"
+            android:text="@string/HongBao"
+            android:textColor="@color/colorText"
+            android:textSize="20sp" />
 
         <TextView
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
-            android:layout_centerVertical="true"
-            android:textSize="13sp"
-            android:text="@string/RecordHongbao"
-            android:textColor="@color/colorText"
             android:id="@+id/text_hongbao_record"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/RecordHongbao"
+            android:textColor="@color/colorText"
+            android:textSize="13sp" />
     </RelativeLayout>
-    <ScrollView
-        android:orientation="vertical"
+
+    <com.tiantianle.view.PullToRefreshView
+        android:id="@+id/ll_hongbao"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <RelativeLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="40dp">
-            <LinearLayout
-                android:layout_centerInParent="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-
-                <TextView
-                    android:text="@string/julihongbao"
-                    android:textColor="@color/clolrTextNorenl"
-                    android:textSize="12sp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <cn.iwgang.countdownview.CountdownView
-                    android:id="@+id/text_countdownv_hongbao_fram"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    app:isHideTimeBackground="true"
-                    app:isShowHour="true"
-                    app:isShowMinute="true"
-                    app:isShowSecond="true"
-                    app:timeTextColor="@color/colorBackMemu"
-                    app:timeTextSize="12sp"
-                    app:isTimeTextBold="true"
-                    app:suffixTextColor="@color/clolrTextNorenl"
-                    app:suffixTextSize="12sp"
-                    app:suffixHour="时"
-                    app:suffixMinute="分"
-                    app:suffixSecond="秒"
-                    />
-
-
-
-
-
-            </LinearLayout>
-        </RelativeLayout>
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="@color/progressbarNomal"
-            />
 
         <LinearLayout
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@mipmap/hongbaochangci"
-                android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/text_hongbao_changci"
-                    android:text="@string/hongbaochangci1"
-                    android:textColor="@color/colorText"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
 
                 <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/ll_hongbao_changci"
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/text_startim_hongbaotiem"
-                        android:text="13:00"
 
-                        android:textColor="@color/colorText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
                     <TextView
-                        android:text="-"
-                        android:textColor="@color/colorText"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <TextView
-                        android:id="@+id/text_endtiem__hongbaotime"
-                        android:textColor="@color/colorText"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/julihongbao"
+                        android:textColor="@color/clolrTextNorenl"
+                        android:textSize="12sp" />
+
+                    <cn.iwgang.countdownview.CountdownView
+                        android:id="@+id/text_countdownv_hongbao_fram"
                         android:layout_width="wrap_content"
-                        android:text="13:30"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="40dp"
+                        app:isHideTimeBackground="true"
+                        app:isShowHour="true"
+                        app:isShowMinute="true"
+                        app:isShowSecond="true"
+                        app:isTimeTextBold="true"
+                        app:suffixHour="时"
+                        app:suffixMinute="分"
+                        app:suffixSecond="秒"
+                        app:suffixTextColor="@color/clolrTextNorenl"
+                        app:suffixTextSize="12sp"
+                        app:timeTextColor="@color/colorBackMemu"
+                        app:timeTextSize="12sp" />
+
                 </LinearLayout>
+            </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/text_jieguo_hongbao"
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/colorText"
-                    android:layout_gravity="center_horizontal"
-                    android:text="未开始"
-                    android:layout_marginBottom="20dp"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/progressbarNomal" />
+
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@mipmap/hongbaochangci"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/text1_hongbao_changci"
-                    android:text="@string/hongbaochangci1"
-                    android:textColor="@color/colorText"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/ll1_hongbao_changci"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/ll_scene_one"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/text1_startim_hongbaotiem"
-                        android:text="13:00"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/shape_red_envelope_bg_red"
+                    android:orientation="vertical">
 
-                        android:textColor="@color/colorText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
                     <TextView
-                        android:text="-"
-                        android:textColor="@color/colorText"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/hongbaochangci1"
+                        android:textColor="@color/colorText" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_hongbao_changci"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_one_static"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hongbaoTime"
+                            android:textColor="@color/colorText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" - "
+                            android:textColor="@color/colorText" />
+
+                        <TextView
+                            android:id="@+id/tv_one_end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hongbaoTime"
+                            android:textColor="@color/colorText" />
+                    </LinearLayout>
+
                     <TextView
-                        android:id="@+id/text1_endtiem__hongbaotime"
-                        android:textColor="@color/colorText"
+                        android:id="@+id/tv_one_state"
                         android:layout_width="wrap_content"
-                        android:text="13:30"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="已结束"
+                        android:textSize="15sp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/colorText" />
                 </LinearLayout>
-
-                <TextView
-                    android:id="@+id/text1_jieguo_hongbao"
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/colorText"
-                    android:layout_gravity="center_horizontal"
-                    android:text="未开始"
-                    android:layout_marginBottom="20dp"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@mipmap/hongbaochangci"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/text2_hongbao_changci"
-                    android:text="@string/hongbaochangci1"
-                    android:textColor="@color/colorText"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
 
                 <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/ll2_hongbao_changci"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/ll_scene_two"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/text2_startim_hongbaotiem"
-                        android:text="13:00"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_red_envelope_bg_red"
+                    android:orientation="vertical">
 
-                        android:textColor="@color/colorText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
                     <TextView
-                        android:text="-"
-                        android:textColor="@color/colorText"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/hongbaochangci2"
+                        android:textColor="@color/colorText" />
+
+                    <LinearLayout
+                        android:id="@+id/ll1_hongbao_changci"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_two_static"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hongbaoTime"
+                            android:textColor="@color/colorText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" - "
+                            android:textColor="@color/colorText" />
+
+                        <TextView
+                            android:id="@+id/tv_two_end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hongbaoTime"
+                            android:textColor="@color/colorText" />
+                    </LinearLayout>
+
                     <TextView
-                        android:id="@+id/text2_endtiem__hongbaotime"
-                        android:textColor="@color/colorText"
+                        android:id="@+id/tv_two_state"
                         android:layout_width="wrap_content"
-                        android:text="13:30"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="10dp"
+                        android:text="正在进行"
+                        android:textColor="@color/colorText" />
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text2_jieguo_hongbao"
-                    android:layout_width="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/colorText"
-                    android:layout_gravity="center_horizontal"
-                    android:text="未开始"
-                    android:layout_marginBottom="20dp"
-                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:id="@+id/ll_scene_three"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_red_envelope_bg_red"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/hongbaochangci3"
+                        android:textColor="@color/colorText" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_three_static"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hongbaoTime"
+                            android:textColor="@color/colorText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" - "
+                            android:textColor="@color/colorText" />
+
+                        <TextView
+                            android:id="@+id/tv_three_end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hongbaoTime"
+                            android:textColor="@color/colorText" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_three_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="10dp"
+                        android:text="未开始"
+                        android:textColor="@color/colorText" />
+                </LinearLayout>
+
+
             </LinearLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp">
 
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_hongbao_dongtai_shap"
+                    android:text="@string/hongbaoDongtai"
+                    android:textColor="@color/colorText" />
+
+            </RelativeLayout>
+
+            <com.allen.library.SuperTextView
+                android:layout_width="350dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorText"
+                app:sCenterTextColor="@color/clolrTextNorenl"
+                app:sCenterTextSize="14sp"
+                app:sCenterTextString="@string/jine"
+                app:sLeftTextColor="@color/clolrTextNorenl"
+                app:sLeftTextSize="14sp"
+                app:sLeftTextString="@string/userID"
+                app:sRightTextColor="@color/clolrTextNorenl"
+                app:sRightTextSize="14sp"
+                app:sRightTextString="@string/tiem" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/progressbarNomal" />
+
+            <com.tiantianle.view.MyListview
+                android:id="@+id/mliseview_hongbao_fram"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
         </LinearLayout>
-        <RelativeLayout
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-            <Button
-                android:layout_centerInParent="true"
-                android:text="@string/hongbaoDongtai"
-                android:layout_width="200dp"
-                android:textColor="@color/colorText"
-                android:background="@drawable/btn_hongbao_dongtai_shap"
-                android:layout_height="60dp"/>
-
-        </RelativeLayout>
-        <com.allen.library.SuperTextView
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="350dp"
-            android:layout_height="30dp"
-            android:background="@color/colorText"
-            app:sCenterTextSize="14sp"
-            app:sLeftTextSize="14sp"
-            app:sRightTextSize="14sp"
-            app:sCenterTextColor="@color/clolrTextNorenl"
-            app:sLeftTextColor="@color/clolrTextNorenl"
-            app:sRightTextColor="@color/clolrTextNorenl"
-            app:sLeftTextString="@string/userID"
-            app:sCenterTextString="@string/jine"
-            app:sRightTextString="@string/tiem"
-            />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/progressbarNomal"
-            />
-        <com.tiantianle.view.MyListview
-            android:id="@+id/mliseview_hongbao_fram"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-    </LinearLayout>
     </ScrollView>
+
+    </com.tiantianle.view.PullToRefreshView>
 </LinearLayout>

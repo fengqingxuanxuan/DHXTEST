@@ -1,7 +1,6 @@
 package com.tiantianle.fragment;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -22,6 +21,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.google.gson.Gson;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.makeramen.roundedimageview.RoundedImageView;
 import com.tiantianle.Bean.UserInformationBean;
 import com.tiantianle.MainActivity;
 import com.tiantianle.R;
@@ -43,7 +43,7 @@ import org.xutils.x;
 
 /**
  * Created by wyj on 2017/1/22.
- *
+ * <p>
  * 我的fragment
  */
 
@@ -51,8 +51,10 @@ public class MyFragment extends Fragment implements View.OnClickListener {
 
     private Dialog progressDialog;
 
+    private CallBackValue callBackValue; //获取用户信息成功后回调口
+
     protected View rootView;
-    //protected RoundedImageView mImgMyUserHeard; //头像
+    protected RoundedImageView mImgMyUserHeard; //头像
 
     protected TextView tv_name; //昵称
     protected TextView tv_signature; //签名
@@ -76,21 +78,34 @@ public class MyFragment extends Fragment implements View.OnClickListener {
         FragmentActivity activity = getActivity();
         menu = (SlidingMenu) activity.findViewById(R.id.activity_main);
         menu.setSelected(false);
+        callBackValue = (CallBackValue) getActivity();
         return rootView;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        getHttpData(); //获取头像 签名 昵称
 
-        getHttpHomeData();// 获取魔豆
+        System.out.println("item = " + Constant.Config.imei);
+        System.out.println("item = " + TextUtils.isEmpty(Constant.Config.account));
+        if (!TextUtils.isEmpty(Constant.Config.account)) {
+            getHttpData(); //获取头像 签名 昵称
+            getHttpHomeData();// 获取魔豆
+        } else {
+            Glide.with(getActivity())
+                    .load(R.mipmap.tx)
+                    .into(mImgMyUserHeard);
+            tv_name.setText("点击登录");
+            tv_signature.setText("");
+            mSuptertextMagicBean.setRightString("0.00");
+            callBackValue.SendMessageValue();
+        }
     }
 
 
     private void initView(View rootView) {
-//        mImgMyUserHeard = (RoundedImageView) rootView.findViewById(R.id.img_my_userHeard);
-//        mImgMyUserHeard.setOnClickListener(MyFragment.this);
+        mImgMyUserHeard = (RoundedImageView) rootView.findViewById(R.id.img_my_userHeard);
+        mImgMyUserHeard.setOnClickListener(MyFragment.this);
         tv_name = (TextView) rootView.findViewById(R.id.tv_name);
         tv_signature = (TextView) rootView.findViewById(R.id.tv_signature);
         mBtnBack = (Button) rootView.findViewById(R.id.btn_back);
@@ -115,7 +130,7 @@ public class MyFragment extends Fragment implements View.OnClickListener {
                 if (TextUtils.isEmpty(Constant.Config.account)) {
                     IntentUtils.goTo(getActivity(), LoginActivity.class);
                 } else {
-                    IntentUtils.goTo(getActivity(), ModifyInformationActivity.class,balance);
+                    IntentUtils.goTo(getActivity(), ModifyInformationActivity.class, balance);
                 }
 
                 break;
@@ -151,11 +166,14 @@ public class MyFragment extends Fragment implements View.OnClickListener {
 
                 Constant.Config.account = null;
                 Constant.Config.password = null;
+                Constant.Config.MagicBeans = null;
+                Constant.Config.nickname = null;
+                Constant.Config.Head = null;
 
-//                SharedPreferences.Editor editor = MainActivity.sp.edit();
-//                editor.putString("account", null);
-//                editor.putString("password", null);
-//                editor.commit();
+                SharedPreferences.Editor editor = Constant.Config.sp.edit();
+                editor.putString("account", null);
+                editor.putString("password", null);
+                editor.commit();
 
                 IntentUtils.goTo(getActivity(), LoginActivity.class);
 
@@ -176,7 +194,7 @@ public class MyFragment extends Fragment implements View.OnClickListener {
         params.addParameter("account", Constant.Config.account);
         params.addParameter("imei", Constant.Config.imei);
 
-        showDialog(getActivity(),"努力加载中...",true);
+        MainActivity.ManshowDialog(getActivity(), "努力加载中...", false);
 
         x.http().post(params, new Callback.CommonCallback<String>() {
 
@@ -216,7 +234,8 @@ public class MyFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onFinished() {
                 LogUtil.e("onFinished == ");
-                closeDialog();
+                callBackValue.SendMessageValue();
+                MainActivity.MancloseDialog();
             }
         });
 
@@ -232,52 +251,26 @@ public class MyFragment extends Fragment implements View.OnClickListener {
                     .centerCrop()
                     .placeholder(R.mipmap.tx)
                     .error(R.mipmap.tx)
-                    .into(new BitmapImageViewTarget(null) {
+                    .into(new BitmapImageViewTarget(mImgMyUserHeard) {
                         @Override
                         protected void setResource(Bitmap resource) {
                             RoundedBitmapDrawable circularBitmapDrawable =
                                     RoundedBitmapDrawableFactory.create(getActivity().getResources(), resource);
                             circularBitmapDrawable.setCircular(true);
-                          //  null.setImageDrawable(circularBitmapDrawable);
+                            mImgMyUserHeard.setImageDrawable(circularBitmapDrawable);
                         }
                     });
 
             Constant.Config.Head = userinfobean.getBiz_content().getAvatar();
+            Constant.Config.nickname=userinfobean.getBiz_content().getNickname();
         }
 
         tv_name.setText(userinfobean.getBiz_content().getNickname());
         tv_signature.setText(userinfobean.getBiz_content().getSignname());
-
     }
 
 
-    //打开Dialog
-    public void showDialog(Context context, String str, Boolean bool) {
-        progressDialog = new Dialog(context);
-        progressDialog.setContentView(R.layout.dolog);
-        progressDialog.getWindow().setBackgroundDrawableResource(
-                android.R.color.transparent);
-        TextView msg = (TextView) progressDialog
-                .findViewById(R.id.tv_loadingmsg);
-        msg.setText(str);
-        if (bool) {
 
-            //设置dialog点击返回键也不会消失
-            progressDialog.setCancelable(false);
-        }
-
-        progressDialog.setCanceledOnTouchOutside(false);
-
-        progressDialog.show();
-    }
-
-    //关闭Dialog
-    public void closeDialog() {
-        if(progressDialog !=null){
-            System.out.println("关闭Dialog！");
-            progressDialog.dismiss();
-        }
-    }
 
 
     private void getHttpHomeData() {
@@ -291,7 +284,7 @@ public class MyFragment extends Fragment implements View.OnClickListener {
         params.addParameter("account", Constant.Config.account);
         params.addParameter("imei", Constant.Config.imei);
 
-       // showDialog(getActivity(),"努力加载中...",true);
+         MainActivity.ManshowDialog(getActivity(),"努力加载中...",true);
 
         x.http().post(params, new Callback.CommonCallback<String>() {
 
@@ -303,14 +296,14 @@ public class MyFragment extends Fragment implements View.OnClickListener {
 
                 try {
                     JSONObject js = new JSONObject(result);
-                    if(js.get("state").equals("success")){
+                    if (js.get("state").equals("success")) {
 
-                        JSONObject jsonObject =js.getJSONObject("biz_content");
+                        JSONObject jsonObject = js.getJSONObject("biz_content");
                         balance = jsonObject.get("money").toString();
                         mSuptertextMagicBean.setRightString(balance);
-
-                    }else {
-                        ToastUtils.showShort(getActivity(),js.get("biz_content").toString());
+                        Constant.Config.MagicBeans = balance;
+                    } else {
+                        ToastUtils.showShort(getActivity(), js.get("biz_content").toString());
                     }
 
                 } catch (JSONException e) {
@@ -336,9 +329,15 @@ public class MyFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onFinished() {
                 LogUtil.e("onFinished == ");
-                closeDialog();
+                callBackValue.SendMessageValue();
+                MainActivity.MancloseDialog();
             }
         });
 
+    }
+
+    //定义一个回调接口
+    public interface CallBackValue{
+        public void SendMessageValue();
     }
 }

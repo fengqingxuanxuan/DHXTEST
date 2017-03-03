@@ -41,7 +41,6 @@ public class ShiYouKami extends Activity implements View.OnClickListener {
     private List<Flow> mFlowList;
     private String userid[] = {"1105", "1103", "1103", "1103", "1103", "1103", "1103", "1103"};
     private ShiYouKaMiAdapter mShiYouKaMiAdapter;
-
     private String warename;
     private String warecode;
     @Override

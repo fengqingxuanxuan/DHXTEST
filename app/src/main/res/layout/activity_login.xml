@@ -93,4 +93,23 @@
             />
     </RelativeLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+    </View>
+
+    <Button
+        android:id="@+id/bt_login_Visitors"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selector_button_confirm_change"
+        android:text="@string/Visitors_Login"
+        android:textColor="@color/colorText" />
+
 </LinearLayout>

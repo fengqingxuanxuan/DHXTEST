@@ -1,18 +1,34 @@
 [
     {
-        "merged": "F:\\pbtest\\TianTianLe\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
-        "source": "F:\\pbtest\\TianTianLe\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
+        "merged": "E:\\Git\\Git_warehouse\\TianTianLe\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
+        "source": "E:\\Git\\Git_warehouse\\TianTianLe\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
     },
     {
-        "merged": "F:\\pbtest\\TianTianLe\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
-        "source": "F:\\pbtest\\TianTianLe\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
+        "merged": "E:\\Git\\Git_warehouse\\TianTianLe\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
+        "source": "E:\\Git\\Git_warehouse\\TianTianLe\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
     },
     {
-        "merged": "F:\\pbtest\\TianTianLe\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
-        "source": "F:\\pbtest\\TianTianLe\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
+        "merged": "F:\\dhx\\TianTianLe\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
+        "source": "F:\\dhx\\TianTianLe\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
     },
     {
-        "merged": "F:\\pbtest\\TianTianLe\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_bottom.xml",
-        "source": "F:\\pbtest\\TianTianLe\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_bottom.xml"
+        "merged": "F:\\dhx\\TianTianLe\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
+        "source": "F:\\dhx\\TianTianLe\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
+    },
+    {
+        "merged": "E:\\Git\\Git_warehouse\\TianTianLe\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_out_to_top.xml",
+        "source": "E:\\Git\\Git_warehouse\\TianTianLe\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_out_to_top.xml"
+    },
+    {
+        "merged": "F:\\dhx\\TianTianLe\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_top.xml",
+        "source": "F:\\dhx\\TianTianLe\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_top.xml"
+    },
+    {
+        "merged": "E:\\Git\\Git_warehouse\\TianTianLe\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
+        "source": "E:\\Git\\Git_warehouse\\TianTianLe\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\dhx\\TianTianLe\\pulltorefresh\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_bottom.xml",
+        "source": "F:\\dhx\\TianTianLe\\pulltorefresh\\build\\intermediates\\bundles\\debug\\res\\anim\\slide_in_from_bottom.xml"
     }
 ]

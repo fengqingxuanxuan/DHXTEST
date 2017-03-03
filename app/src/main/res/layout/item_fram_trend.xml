@@ -1,40 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="#AA77AF"
-    >
-<RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:background="@color/colorBackMemu">
-    <TextView
-        android:id="@+id/text_trend"
-        android:text="趋势"
-        android:textSize="20sp"
-        android:layout_centerInParent="true"
-        android:textColor="@color/colorText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <ImageView
-        android:id="@+id/img_seting"
-        android:layout_width="20dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_height="20dp"
-        android:layout_marginRight="10dp"
-        android:src="@mipmap/seting"/>
-    <ImageView
-        android:id="@+id/img_enlarge"
-        android:layout_width="20dp"
-       android:layout_toLeftOf="@id/img_seting"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="20dp"
-        android:layout_height="20dp"
-        android:src="@mipmap/enlarge"/>
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorBackMemu">
+
+        <TextView
+            android:id="@+id/text_trend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="趋势"
+            android:textColor="@color/colorText"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img_seting"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/seting" />
+
+        <ImageView
+            android:id="@+id/img_enlarge"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/img_seting"
+            android:src="@mipmap/enlarge" />
+    </RelativeLayout>
 
 
-</RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tiantianle.utils.ProgressWebView
+            android:id="@+id/progress_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.tiantianle.utils.ProgressWebView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
 
 </LinearLayout>

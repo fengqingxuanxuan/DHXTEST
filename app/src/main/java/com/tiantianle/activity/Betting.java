@@ -8,9 +8,6 @@ import android.widget.TextView;
 
 import com.tiantianle.R;
 
-/*
-* 自动投注
-* */
 public class Betting extends AppCompatActivity implements View.OnClickListener {
 
     protected ImageView mBighMenu;

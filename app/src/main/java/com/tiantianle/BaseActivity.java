@@ -48,6 +48,9 @@ public class BaseActivity extends AppCompatActivity {
 
     //打开Dialog
     public void showDialog(Context context, String str,Boolean bool) {
+        if(progressDialog != null){
+            return;
+        }
         progressDialog = new Dialog(context);
         progressDialog.setContentView(R.layout.dolog);
         progressDialog.getWindow().setBackgroundDrawableResource(
@@ -71,6 +74,7 @@ public class BaseActivity extends AppCompatActivity {
         if(progressDialog !=null){
             System.out.println("关闭Dialog！");
             progressDialog.dismiss();
+            progressDialog = null;
         }
     }
 }

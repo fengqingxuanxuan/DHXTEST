@@ -1,98 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <!--  <TextView
-          android:id="@+id/text"
-          android:text="i am main"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />-->
+  <!--  <TextView
+        android:id="@+id/text"
+        android:text="i am main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
         android:orientation="vertical"
         >
-
         <FrameLayout
             android:id="@+id/fram_big_hall"
+            android:background="#f00"
             android:layout_width="match_parent"
             android:layout_height="match_parent"></FrameLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:background="#ffffff"
         android:orientation="vertical">
-
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#D4D4D4"
             />
-
         <RadioGroup
+            android:layout_marginTop="13dp"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
             <RadioButton
                 android:id="@+id/radiob_bighome_main"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@drawable/hall"
                 android:gravity="center"
-                android:text="@string/Hall"
+                android:textSize="13sp"
                 android:textColor="@drawable/text_selected"
-                android:textSize="13sp"/>
-
+                android:drawableTop="@drawable/hall"
+                android:layout_height="wrap_content"
+                android:text="@string/Hall"/>
             <RadioButton
                 android:id="@+id/radiob_trend_main"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@drawable/trend"
+                android:layout_width="0dp"
                 android:gravity="center"
-                android:text="@string/Trend"
+                android:layout_weight="1"
+                android:textSize="13sp"
                 android:textColor="@drawable/text_selected"
-                android:textSize="13sp"/>
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/trend"
+                android:text="@string/Trend"/>
 
             <RadioButton
                 android:id="@+id/radiob_shaopp_main"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@drawable/shaopping"
+                android:textSize="13sp"
                 android:gravity="center"
-                android:text="@string/ShoppingMall"
                 android:textColor="@drawable/text_selected"
-                android:textSize="13sp"/>
-
+                android:drawableTop="@drawable/shaopping"
+                android:text="@string/ShoppingMall"
+                android:layout_height="wrap_content"/>
             <RadioButton
                 android:id="@+id/radiob_me_main"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@drawable/my"
                 android:gravity="center"
+                android:drawableTop="@drawable/my"
                 android:text="@string/My"
+                android:layout_width="0dp"
+                android:textSize="13sp"
+                android:layout_weight="1"
                 android:textColor="@drawable/text_selected"
-                android:textSize="13sp"/>
+                android:layout_height="wrap_content"/>
         </RadioGroup>
+
 
 
     </LinearLayout>

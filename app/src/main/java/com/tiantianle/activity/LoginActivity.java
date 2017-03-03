@@ -1,7 +1,9 @@
 package com.tiantianle.activity;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -35,19 +37,27 @@ public class LoginActivity extends BaseActivity {
     private TextView tv_title_title;
 
     private EditText et_number; //手机号
+
     private EditText et_Password; //密码
-    private Button bt_login_immediately;//立即登录
+
+    private Button bt_login_Visitors;//立即登录
+
+    private Button bt_login_immediately;//游客登录
+
     private TextView tv_forgot_password;//忘记密码
+
     private TextView tv_register_now;//立即注册
 
     private String number;//手机号
     private String password;//密码
 
+    private TelephonyManager telephonyManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        telephonyManager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
         InitView();
 
     }
@@ -59,13 +69,16 @@ public class LoginActivity extends BaseActivity {
         et_number = (EditText) findViewById(R.id.et_number);
         et_Password = (EditText) findViewById(R.id.et_Password);
         bt_login_immediately = (Button) findViewById(R.id.bt_login_immediately);
+        bt_login_Visitors = (Button) findViewById(R.id.bt_login_Visitors);
         tv_forgot_password = (TextView) findViewById(R.id.tv_forgot_password);
         tv_register_now = (TextView) findViewById(R.id.tv_register_now);
 
         tv_title_title.setText("登录");
+        img_back_title.setVisibility(View.GONE);
 
         img_back_title.setOnClickListener(new MyOnClickListener());
         bt_login_immediately.setOnClickListener(new MyOnClickListener());
+        bt_login_Visitors.setOnClickListener(new MyOnClickListener());
         tv_forgot_password.setOnClickListener(new MyOnClickListener());
         tv_register_now.setOnClickListener(new MyOnClickListener());
     }
@@ -81,8 +94,20 @@ public class LoginActivity extends BaseActivity {
                     break;
                 case R.id.bt_login_immediately:// 立即登录
 
+                    Constant.Config.imei = telephonyManager.getDeviceId();
                     getHttpData();
                     break;
+
+                case R.id.bt_login_Visitors:// 游客登录
+
+                    Constant.Config.account = "77777777777";
+                    Constant.Config.password = "11111111111";
+                    Constant.Config.imei = "123456789";
+                    IntentUtils.goTo(LoginActivity.this,MainActivity.class);
+                    finish();
+
+                    break;
+
                 case R.id.tv_forgot_password:// 忘记密码
 
                     IntentUtils.goTo(LoginActivity.this, ForgotPasswordActivity.class, false);
@@ -111,10 +136,10 @@ public class LoginActivity extends BaseActivity {
             return;
         }
 
-        showDialog(LoginActivity.this, "努力加载中...",true);
+        showDialog(LoginActivity.this, "努力加载中...",false);
 
 
-        final RequestParams params = new RequestParams(HttpApi.LONGIN);
+        RequestParams params = new RequestParams(HttpApi.LONGIN);
         params.addParameter("account", number);
         params.addParameter("imei", Constant.Config.imei);
         params.addParameter("password", password);
@@ -137,12 +162,77 @@ public class LoginActivity extends BaseActivity {
                         Constant.Config.account = number;
                         Constant.Config.password = password;
 
-//                        SharedPreferences.Editor editor = MainActivity.sp.edit();
-//                        editor.putString("account", number);
-//                        editor.putString("password", password);
-//                        editor.commit();
+                        SharedPreferences.Editor editor =  Constant.Config.sp.edit();
+                        editor.putString("account", number);
+                        editor.putString("password", password);
+                        editor.commit();
 
-                        finish();
+                        YesNoHttpTradePassword();
+                    } else {
+                        ToastUtils.showShort(LoginActivity.this, jsonObject.get("biz_content").toString());
+                    }
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    LogUtil.e("解析异常！");
+                }
+                closeDialog();
+            }
+
+            //请求失败
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+                LogUtil.e("联网失败 == " + ex.getMessage());
+                ToastUtils.showShort(LoginActivity.this, "网络不给力！");
+                closeDialog();
+            }
+
+            //主动调用取消请求的回调方法
+            @Override
+            public void onCancelled(CancelledException cex) {
+                LogUtil.e("onCancelled == " + cex.getMessage());
+                closeDialog();
+            }
+
+            // 不管成功或者失败最后都会回调该接口
+            @Override
+            public void onFinished() {
+                LogUtil.e("onFinished == ");
+
+            }
+        });
+    }
+
+    //判断交易密码是否设置过
+    private void YesNoHttpTradePassword() {
+
+        RequestParams params = new RequestParams(HttpApi.YES_NO_TREAD_PASSWORD);
+        params.addParameter("account", number);
+        params.addParameter("imei", Constant.Config.imei);
+
+        showDialog(LoginActivity.this,"正在加载请稍后...",false);
+
+        x.http().post(params, new Callback.CommonCallback<String>() {
+
+            //请求成功
+            @Override
+            public void onSuccess(String result) {
+
+                LogUtil.e("联网成功 == " + result.toString());
+
+                try {
+                    JSONObject jsonObject = new JSONObject(result);
+                    if (jsonObject.get("state").toString().equals("success")) {
+                            if(jsonObject.get("biz_content").equals("已设置提现密码")){
+
+                                IntentUtils.goTo(LoginActivity.this,MainActivity.class);
+                                finish();
+                            }else{
+                                //没有设置交易密码
+                                IntentUtils.goTo(LoginActivity.this,SetTradingPassword.class);
+                            }
+
                     } else {
                         ToastUtils.showShort(LoginActivity.this, jsonObject.get("biz_content").toString());
                     }
@@ -159,7 +249,7 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
                 LogUtil.e("联网失败 == " + ex.getMessage());
-                ToastUtils.showShort(LoginActivity.this, "网络不给力！");
+                ToastUtils.showShort(LoginActivity.this, "网络不给力sss！");
             }
 
             //主动调用取消请求的回调方法
