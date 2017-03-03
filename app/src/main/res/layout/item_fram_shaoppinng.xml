@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorText">
+
+   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorBackMemu"
+        >
+        <TextView
+            android:id="@+id/text_shaopping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:text="@string/ShoppingMall"/>
+        <TextView
+            android:id="@+id/text_exchange_record"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="13sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/RecordExchange"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+ <!--   <com.allen.library.SuperTextView
+        android:id="@+id/suptertext_yidongkami"
+        app:sLeftTextString="@string/yiDongKaMi"
+        app:sRightIconWidth="17dp"
+        app:sRightIconHeight="17dp"
+        app:sUseRipple="true"
+        app:sRightIconRes="@mipmap/right"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/progressbarNomal"
+        />
+    <com.allen.library.SuperTextView
+        android:id="@+id/suptertext_jingdongkami"
+        app:sLeftTextString="@string/jingDongKaMi"
+        app:sRightIconWidth="17dp"
+        app:sRightIconHeight="17dp"
+        app:sUseRipple="true"
+        app:sRightIconRes="@mipmap/right"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/progressbarNomal"
+        />
+    <com.allen.library.SuperTextView
+        android:id="@+id/suptertext_shihuayoukami"
+        app:sLeftTextString="@string/shiHuaYouKaKaMi"
+        app:sRightIconWidth="17dp"
+        app:sRightIconHeight="17dp"
+        app:sUseRipple="true"
+        app:sRightIconRes="@mipmap/right"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/progressbarNomal"/>-->
+    <ListView
+        android:id="@+id/listview_shaopping_adapter"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

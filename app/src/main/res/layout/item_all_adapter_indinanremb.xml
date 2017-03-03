@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_quanbu_indinanremb"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_all_fram_indinanremb"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/modou"/>.
+            <TextView
+                android:id="@+id/text_modou_itme_all_adapter_indinand"
+                android:layout_width="wrap_content"
+                android:text="1000"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="60dp"
+                android:layout_alignLeft="@+id/img_all_fram_indinanremb"
+                android:layout_alignStart="@+id/img_all_fram_indinanremb"
+
+                />
+            <TextView
+                android:id="@+id/text_name_itme_all_adapter_indinand"
+                android:textColor="@color/colorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="魔豆"
+                android:textSize="13sp"
+                android:layout_alignBaseline="@+id/text_modou_itme_all_adapter_indinand"
+                android:layout_alignBottom="@+id/text_modou_itme_all_adapter_indinand"
+                android:layout_toRightOf="@+id/text_modou_itme_all_adapter_indinand"
+                android:layout_toEndOf="@+id/text_modou_itme_all_adapter_indinand"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="100dp"
+
+            >
+            <TextView
+                android:id="@+id/text_all_fram_indinanremb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/clolrTextNorenl"
+                android:textSize="15sp"
+                android:text="@string/qihao"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:id="@+id/text_qishu_all_fram_indinanremb"
+                android:layout_toRightOf="@id/text_all_fram_indinanremb"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/clolrTextNorenl"
+                android:text="31101"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/text1_1all_fram_indinanrenb"
+                android:text="@string/canyvren"
+                android:textColor="@color/clolrTextNorenl"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/text_all_fram_indinanremb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/text_renci_all_fram_indinanremb"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/colorBackMemu"
+                android:text="1"
+                android:layout_toRightOf="@id/text1_1all_fram_indinanrenb"
+                android:layout_below="@id/text_qishu_all_fram_indinanremb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="@string/renci"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/clolrTextNorenl"
+                android:layout_below="@id/text_qishu_all_fram_indinanremb"
+                android:layout_toRightOf="@id/text_renci_all_fram_indinanremb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:id="@+id/ll_all_adapter_indinanremb"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            >
+            <ProgressBar
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/progressBar_all_adapter_indianaremb"
+                android:layout_marginRight="10dp"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="200dp"
+                android:progressDrawable="@drawable/progressbar"
+                android:layout_height="5dp"
+                android:max="100"
+                android:progress="50"
+                android:visibility="visible"
+                />
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:id="@+id/text_usernum_all_indinaremb"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="总需16人"
+                    android:textSize="12sp"
+                    android:textColor="@color/clolrTextNorenl"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/text_shentyvrenshu_all_indinanremb"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="剩余12r人"
+                    android:textSize="12sp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/clolrTextNorenl"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp">
+            <Button
+                android:id="@+id/btn_zhuijia_all_adapter_indinanremb"
+                android:layout_width="80dp"
+                android:text="追加"
+                android:background="@drawable/my_button_tuichu"
+                android:textColor="@color/colorText"
+                android:layout_centerInParent="true"
+                android:layout_height="40dp"/>
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_all_adapter_indinanremb"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        >
+        <TextView
+            android:text="@string/jijianjiexiao"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorBackMemu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_again_all_fram_indinanremb"
+            android:layout_width="100dp"
+            android:textColor="@color/colorBackMemu"
+            android:layout_alignParentRight="true"
+            android:text="@string/again"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_adapter_iniana_shap"
+            android:layout_height="35dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_all_jieixao_indinanremb"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="60dp">
+        <TextView
+            android:id="@+id/text2_all_fram_indinanremb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/huojian"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/text3_all_fram_indinanremb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/textzhongjiang"
+            android:layout_marginLeft="10dp"
+            android:text="@string/woyao"
+            android:layout_toRightOf="@id/text2_all_fram_indinanremb"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/text_renci2_all_fram_indinanremb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="7"
+            android:textSize="15sp"
+            android:textColor="@color/colorBackMemu"
+            android:layout_toRightOf="@id/text3_all_fram_indinanremb"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/renci"
+            android:textSize="15sp"
+            android:layout_toRightOf="@id/text_renci2_all_fram_indinanremb"
+            android:layout_centerVertical="true"
+            />
+        <Button
+            android:id="@+id/btn_again_all_jiexiao_fram_indinanremb"
+            android:layout_width="100dp"
+            android:textColor="@color/colorBackMemu"
+            android:layout_alignParentRight="true"
+            android:text="@string/again"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_adapter_iniana_shap"
+            android:layout_height="35dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.tiantianle">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".MyaApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/lolol"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- 夺宝记录 -->
+        <activity android:name=".activity.IndianaRember">
+        </activity>
+        <!-- 红包记录 -->
+        <activity android:name=".activity.HongBaoRember">
+        </activity>
+        <!-- 兑换商城-兑换记录 -->
+        <activity android:name=".activity.ShaoppingDuiHuanJiLu">
+        </activity>
+        <!-- 京东E卡密 -->
+        <activity android:name=".activity.JingDongEka">
+        </activity>
+        <!-- 移动卡密 -->
+        <activity android:name=".activity.YiDongKaMi">
+        </activity>
+        <!-- 石油卡密 -->
+        <activity android:name=".activity.ShiYouKami">
+        </activity>
+
+        <!-- 我的消息 -->
+        <activity android:name=".activity.MessageActivity">
+        </activity>
+
+        <!-- 我的消息二级界面 -->
+        <activity android:name=".activity.SpecificMessageActivity">
+        </activity>
+        <!-- 投注 -->
+        <activity android:name=".activity.Betting">
+        </activity>
+        <!-- 自动投注 -->
+        <activity android:name=".activity.AutoBetting">
+        </activity>
+        <!--开奖明细-->
+        <activity android:name=".activity.Detailed">
+        </activity>
+    </application>
+
+</manifest>

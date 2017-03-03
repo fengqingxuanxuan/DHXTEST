@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/shape_dia_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:text="修改头像"
+        android:visibility="gone"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_photograph_Album"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/selector_home_radio"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="相册"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/selector_home_radio"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="拍照"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_cancle"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/selector_cancle_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#61BEB5"
+        android:textSize="14sp" />
+
+</LinearLayout>

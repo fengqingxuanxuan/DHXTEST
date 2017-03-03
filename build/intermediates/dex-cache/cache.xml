@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.1.0_1da82d34a2afc038eb715c9c18015f6a68148672\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wyj\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.8.0_ff335c73a7f510ae707438bde307324a2abcc9e8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.0_36b1620f963d87ce020507c0a11c6682737459c3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.github.iwgang\countdownview\2.1.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="822c1ca67975c7795533d9b2ae195e34d8ef4933">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.iwgang-countdownview-2.1.3_e7bb43b375262894aea129974775de8328449b86\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.zhy\flowlayout-lib\1.0.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fdaede6c3d2da36ba042f9db05a60d303e04045f">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.zhy-flowlayout-lib-1.0.3_aff19532418568507ecbe188d24aa2af08690bfd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.0_b577cae5d0dfc8defa88768de12886010c807818\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c8b36b65d6f3f0a00d4a2975954498d64f6b19ee">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_f23bb4c82d8c343b6a2c0c64b032af5fc7fc2430\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wyj\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.0\support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.0_c41f773c4de8cd65594a572071717c9423bdba03\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.1.0_60ce4a4574937e07dfd69c2a5f2b77ee7179b6ce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.android.support\design\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.1.0_f0fc1e7b297c29fa391baaf50ab741e7e52cdb6c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.1.0_e53c74d6e3469ec2a5b1ead21d1d7761c17dd7ff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.1.0_a69d75f6a45333e5a1bb19b1f2a4768a7f41b731\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wyj\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.5.2\ecf534dba3a8446ce84cbb797d314763be212a68\glide-3.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.5.2_ec6c54100212785ef41c8383b9bc81151c54f876\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2156972a1b677a3d9164823412373254b3a7da3c">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_54774d69b58d88eddfdbd57fd618f53164c8d513\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\cn.lemon\countdownview\0.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f67e2652839e499ec9626d26962fa87f3ff04249">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\cn.lemon-countdownview-0.1.0_626544e4d00dc81eafa20302f2d93e659ddab67f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.1.0_c859765c3fa26643ee377a8fa912f354836283f0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.makeramen\roundedimageview\2.3.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fbaffbfc2a42fce3718dc9f52182810ad332b0ec">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.makeramen-roundedimageview-2.3.0_d272722f582ee0c0d1fe6305edabb8ee7dc0f14d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.1.0_66420dc9fdd141fbb068ea9f526103252625665a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\org.xutils\xutils\3.3.40\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e10132f12da0143881647ccbb4cedb494fe0ba41">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\org.xutils-xutils-3.3.40_e504c2e3be2a09a6e0ec7812d75822802fba19e6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.1.0_e8f767e99c8a1a60011de845ca7a06cbb2fcc239\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.1.0_a8b4e9808f2d5e67f49da061e90487069f6ea851\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.github.lygttpod\SuperTextView\1.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bd3979a6bfd5fd8b051fa25d8b6d75a520ecdf28">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.lygttpod-SuperTextView-1.1.1_50853e29c88318140c41943bedc6bf6c71b64275\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wyj\.gradle\caches\modules-2\files-2.1\com.readystatesoftware.systembartint\systembartint\1.0.3\de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287\systembartint-1.0.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="de4f7404e2f58d8f6e83cb1e85d0c2d6c2987287">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\systembartint-1.0.3_328085f49118ad36e8613ef9809b100bfbafa0c0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.dalong\flowlayout\1.0.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="438e45244cb1b4b20eaa7a44d549ce5b8af6158a">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.dalong-flowlayout-1.0.3_60f15be614510e9b13f94af84fca83af934477b2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\pbtest\TianTianLe\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="F:\pbtest\TianTianLe\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.1.0_53e6d2c33fc4b2d589ce1842904a5242e1b6eeca\classes.dex" />
+    </item>
+
+</items>

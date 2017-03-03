@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/suptertext_mybetting_dedailed_type2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sLeftTextString="9969"
+        app:sCenterTextString="5000000"
+        app:sRightTextString="20000000"
+        app:sLeftTextColor="@color/colorBackMemu"
+        app:sRightTextColor="@color/clolrTextNorenl"
+        app:sCenterTextColor="@color/clolrTextNorenl"
+        />
+</LinearLayout>

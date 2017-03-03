@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_hong_bao_rember"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/colorText"
+    tools:context="com.tiantianle.activity.HongBaoRember">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorBackMemu"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/img_hongbaoRember_back"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/navback"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:text="@string/hongbaoDuiHuan"/>
+    </RelativeLayout>
+    <com.allen.library.SuperTextView
+        android:layout_gravity="center_horizontal"
+        app:sLeftTextSize="14sp"
+        app:sRightTextSize="14sp"
+        android:background="@color/colorText"
+        app:sLeftTextString="@string/jine"
+        app:sRightTextString="@string/tiem"
+
+        app:sLeftTextColor="@color/clolrTextNorenl"
+        app:sRightTextColor="@color/clolrTextNorenl"
+        android:layout_width="300dp"
+        android:layout_height="40dp"/>
+    <ListView
+        android:id="@+id/listview_hongbao_DuiHuan"
+        android:layout_width="300dp"
+        android:scrollbars="none"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="match_parent"></ListView>
+
+
+
+
+
+
+
+
+</LinearLayout>

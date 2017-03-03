@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_auto_betting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tiantianle.activity.AutoBetting">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorBackMemu"
+        >
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/img_autoBetting"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/leftback"/>
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/text_autoBetting"
+            android:layout_width="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/colorText"
+            android:layout_height="wrap_content"
+            android:text="测试28自动投注"/>
+    </RelativeLayout>
+</LinearLayout>

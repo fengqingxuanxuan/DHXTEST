@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">天天乐</string>
+    <string name="Jisu28">极速28</string>
+    <string name="Canada28">加拿大28</string>
+    <string name="BeiJing28">北京28</string>
+    <string name="Indiana">夺宝系统</string>
+    <string name="HongBao">整点抢红包</string>
+    <string name="Hall">大厅</string>
+    <string name="Trend">趋势</string>
+    <string name="ShoppingMall">兑换商城</string>
+    <string name="My">我的</string>
+    <string name="Seting">设置</string>
+    <string name="VIP">会员</string>
+    <string name="MagicBean">魔豆</string>
+    <string name="GameTimes">游戏场次</string>
+    <string name="RecordHongbao">红包记录</string>
+    <string name="RecordIndiana">夺宝记录</string>
+    <string name="RecordExchange">兑换记录</string>
+    <string name="message">消息通知</string>
+    <string name="password">密码设置</string>
+    <string name="recharges">魔豆充值</string>
+    <string name="about">关于</string>
+    <string name="buttonback">退出登录</string>
+    <string name="auto">自动投注</string>
+    <string name="newPattern">新建模式</string>
+    <string name="modelManagement">模式管理</string>
+    <string name="myPaLoss">我的盈亏</string>
+    <string name="zongXu">总需</string>
+    <string name="shengYv">剩余</string>
+    <string name="buyPopu">参与次数越多，夺宝成功率越高！</string>
+    <string name="canyvCi">参与人次</string>
+    <string name="goumai">立即购买</string>
+    <string name="qihao">参与期号:</string>
+    <string name="canyvren">我已参与:</string>
+    <string name="jijianjiexiao">即将揭晓 正在计算,请稍后...</string>
+    <string name="huojian">获奖者:</string>
+    <string name="woyao">我要中奖</string>
+    <string name="renci">人次</string>
+    <string name="again">再次购买</string>
+    <string name="neirong">已显示全部内容～</string>
+    <string name="julihongbao">距离下一场抢红包</string>
+    <string name="hongbaochangci1">第一场</string>
+    <string name="hongbaochangci2">第二场</string>
+    <string name="hongbaoDongtai">红包动态</string>
+    <string name="userID">用户ID</string>
+    <string name="jine">红包金额</string>
+    <string name="tiem">时间</string>
+    <string name="hongbaoDuiHuan">兑换记录</string>
+    <string name="yiDongKaMi">移动卡密兑换</string>
+    <string name="jingDongKaMi">京东E卡卡密兑换</string>
+    <string name="shiHuaYouKaKaMi">石化油卡卡密兑换</string>
+    <string name="shaoppDuiHuan">兑换商品</string>
+    <string name="shaoppMoDou">所需魔豆</string>
+    <string name="shaoppTime">兑换时间</string>
+    <string name="duihuanjyPassWord">交易密码:</string>
+    <string name="duihuanConfirm">确认兑换</string>
+    <string name="duihuanNewDongTai">最新兑换动态</string>
+    <string name="duihuanMianZhi">兑换面值:</string>
+    <string name="duihuanSuoXuMoDou">所需魔豆:</string>
+    <string name="MyMessage">我的消息</string>
+    <string name="MyMessage_delete">清空</string>
+
+    <!--登陆界面-->
+    <string name="Input_Number">请输入手机号码</string>
+    <string name="Input_Password">请输入密码</string>
+    <string name="Login_Immediately">立即登录</string>
+    <string name="Forgot_Password">忘记密码?</string>
+    <string name="Register_Now">立即注册</string>
+
+    <string name="Forgot_Passwords">忘记密码</string>
+    <string name="Please_Code">请输入验证码</string>
+    <string name="Please_New_Password">请输入新的登录密码</string>
+    <string name="Obtain_Code">获取验证码</string>
+    <string name="Reset_Password">重置密码</string>
+
+    <string name="Registered">注册</string>
+    <string name="Please_Passwords">请输入登录密码</string>
+
+
+    <!--密码设置-->
+    <string name="Modify_login_password">修改登录密码</string>
+    <string name="Modify_trading_password">修改交易密码</string>
+
+    <string name="OiginalPassword">原登录密码</string>
+    <string name="Oiginal_Transaction_Password">原交易密码</string>
+
+    <string name="New_Password">新登录密码</string>
+    <string name="New_Transaction_Password">新交易密码</string>
+
+    <string name="Confirm_Password">确认登录密码</string>
+    <string name="Confirm_Transaction_Password">确认交易密码</string>
+
+    <string name="Message_Authentication">选择其他方式(短信)验证</string>
+    <string name="Password_Authentication">选择其他方式(密码)验证</string>
+
+    <string name="Transaction_prompt">修改登录密码前请先完成短信验证,将发送验证到</string>
+    <string name="Trading_prompt">修改交易密码前请先完成短信验证,将发送验证到</string>
+
+    <string name="Confirm_Change">确认修改</string>
+    <string name="code">验证码</string>
+    <string name="get_code">点击获取验证码</string>
+    <string name="Please_Password">请输入密码</string>
+
+    <!--修改个人信息-->
+    <string name="Click_Modify_Head">点击修改头像</string>
+    <string name="Nickname">昵称：</string>
+    <string name="Signature">签名：</string>
+    <string name="Trade_Password">交易密码：</string>
+
+    <!--刷新-->
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+
+    <!--倒计时-->
+    <string name="count_down_default_format">%1$s分%2$s秒</string>
+    <string name="user_confirm_countdown"><![CDATA[自定义倒计时样式：<font size=\"3\" color=\"red\">%1$s </font>分<font size=\"3\" color=\"red\">%2$s</font> 秒]]></string>
+
+
+</resources>

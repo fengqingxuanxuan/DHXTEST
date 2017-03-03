@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorBackMemu">
+
+    <ImageView
+        android:id="@+id/img_back_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/navback"/>
+
+    <TextView
+        android:id="@+id/tv_title_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:text="@string/MyMessage"/>
+
+    <TextView
+        android:id="@+id/tv_deletes_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/colorText"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:text="@string/MyMessage_delete"/>
+
+</RelativeLayout>

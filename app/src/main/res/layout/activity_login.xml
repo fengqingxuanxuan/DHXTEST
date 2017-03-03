@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.tiantianle.activity.LoginActivity">
+
+    <include layout="@layout/title_red"></include>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/stroke_unchecked_color"></View>
+
+    <EditText
+        android:id="@+id/et_number"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawableLeft="@mipmap/number"
+        android:drawablePadding="15dp"
+        android:background="@null"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+        android:hint="@string/Input_Number"
+        android:inputType="number"
+        android:paddingLeft="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/clolrTextNorenl">
+    </View>
+
+    <EditText
+        android:id="@+id/et_Password"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:drawableLeft="@mipmap/password"
+        android:drawablePadding="15dp"
+        android:gravity="center_vertical"
+        android:inputType="textPassword"
+        android:hint="@string/Input_Password"
+        android:paddingLeft="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/clolrTextNorenl">
+    </View>
+
+
+    <Button
+        android:id="@+id/bt_login_immediately"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selector_button_confirm_change"
+        android:text="@string/Login_Immediately"
+        android:textColor="@color/colorText" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Forgot_Password"
+            android:padding="20dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_register_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/Register_Now"
+            android:textColor="@color/textzhongjiang"
+            android:padding="20dp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
